@@ -1,1 +1,1 @@
-# gogit
+# homebrew-gogit

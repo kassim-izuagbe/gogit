@@ -1,0 +1,32 @@
+gogit(1) -- Git Navigation Tool (alias: gogit)
+=============================================
+
+## SYNOPSIS
+
+`gogit` <value> [--t br|pr]
+
+## DESCRIPTION
+
+Generates a GitHub link to the given repository branch or PR and opens the link in a tab of the default browser. You must first define and export a variable called 'REPO_URL' in your terminal configuration file (.zshrc or .bashrc or something else)
+
+Definition lists:
+
+  * `--t`, `--type`=[<value>]:
+    Indicates the type of value provided. A branch of PR. If none is provided, the type is determined by the presence of non-numerical characters.
+
+## AUTHOR
+
+Kassim Izuagbe
+
+## COPYRIGHT
+
+GNU GENERAL PUBLIC LICENSE v3.0
+
+## EXAMPLES
+
+gogit T1234 --t br
+    Generates the link for the branch with that name and navigates to it. The type is specified as a branch with "--t br"
+gogit 54321 --t pr
+    Generates the link for the Pull Request (PR) with the number and navigates to it. The type is specified as a PR with "--t pr"
+gogit T5000
+    Generates the link for the given number and navigates to it. No type is specified so it's automatically determined. Based on the presence of non-numberical chars, this will be assumed to be a branch name.
